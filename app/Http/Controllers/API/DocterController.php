@@ -103,7 +103,9 @@ class DocterController extends Controller
             $request->validate([
                 'profil' => 'image|mimes:png,jpg,jpeg'
             ]);
-            Storage::delete($docter->profil);
+            if (Storage::disk('public')->exists($docter->profil)) {
+                Storage::disk('public')->delete($docter->profil);
+            }
             $img_path = $request->file('profil')->store('docter', 'public');
         }
 
@@ -135,7 +137,9 @@ class DocterController extends Controller
     {
         try {
             $docter = Docter::findOrFail($id);
-            Storage::delete($docter->profil);
+            if (Storage::disk('public')->exists($docter->profil)) {
+                Storage::disk('public')->delete($docter->profil);
+            }
             $docter->delete();
             return response()->json([
                 'status' => true,
