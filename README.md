@@ -7,8 +7,77 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Rekap Medis
 
+This is a Laravel project. Follow the steps below to get started with the installation and setup of the Laravel application.
+
+## Prerequisites
+
+Before you start, ensure you have the following installed:
+
+- PHP >= 8.3
+
+- composer require tymon/jwt-auth
+  
+## Steps to Install
+
+1. **Clone the Repository**
+
+   Clone the repository to your local machine using the following command:
+
+   ```bash
+   git clone https://github.com/Ahmadsani31/backend-laravel-rekap-medis.git
+   ```
+   
+   ```bash
+   cd app-windows-aplication-backend
+   ```
+
+   ```bash
+   php artisan key:generate
+   ```
+
+   ```bash
+   composer update
+   composer install
+   ```
+   
+   ```bash
+   cp .env.example .env
+   ```
+
+
+   change your_database_name, your_database_user, your_database_password with what you have.
+
+   ```bash
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_database_user
+   DB_PASSWORD=your_database_password
+   ```
+
+   ```bash
+   php artisan migrate
+   ```
+
+   dont forget generate secret key JWT
+
+   ```bash
+   php artisan jwt:secret
+   ```
+
+   ```bash
+   php artisan serve
+   ```
+
+## Authors
+
+- [@ahmadsani31](https://www.github.com/Ahmadsani31)
+
+
+##
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
