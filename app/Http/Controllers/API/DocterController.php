@@ -27,7 +27,7 @@ class DocterController extends Controller
             // Transform the collection of users
             $docter->getCollection()->transform(function ($dok) {
                 // Example: Add a full name attribute to each user
-                $dok->profil  = asset($dok->profil);
+                $dok->profil  = Storage::url($dok->profil);
                 return $dok;
             });
 
