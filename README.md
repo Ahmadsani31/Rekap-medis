@@ -26,11 +26,11 @@ Before you start, ensure you have the following installed:
    Clone the repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/Ahmadsani31/backend-laravel-rekap-medis.git
+   git clone https://github.com/Ahmadsani31/Rekap-medis.git
    ```
    
    ```bash
-   cd app-windows-aplication-backend
+   cd rekap-medis
    ```
 
    ```bash
