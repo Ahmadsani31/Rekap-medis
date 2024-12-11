@@ -34,16 +34,16 @@ Before you start, ensure you have the following installed:
    ```
 
    ```bash
-   php artisan key:generate
-   ```
-
-   ```bash
    composer update
    composer install
    ```
    
    ```bash
    cp .env.example .env
+   ```
+
+   ```bash
+   php artisan key:generate
    ```
 
 
@@ -66,6 +66,10 @@ Before you start, ensure you have the following installed:
 
    ```bash
    php artisan jwt:secret
+   ```
+
+   ```bash
+   php artisan storage:link
    ```
 
    ```bash
